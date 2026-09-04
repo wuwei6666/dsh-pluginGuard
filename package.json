@@ -1,7 +1,7 @@
 {
   "name": "dsh-plugin-guard",
   "description": "Plugin Guard for the official DSH web client: isolate broken user plugins so the web UI stays up, plus one-click self-update from npm.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -69,7 +69,7 @@
     "lib/profile-guard.js",
     "cordis.patch.yml",
     "README.md",
-    "README.zh-CN.md",
+    "docs/README.zh-CN.md",
     "LICENSE"
   ],
   "publishConfig": {

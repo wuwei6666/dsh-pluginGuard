@@ -1,4 +1,4 @@
-[English](README.md) | **中文**
+[English](../README.md) | **中文**
 
 # dsh-plugin-guard
 
@@ -20,7 +20,7 @@ _插件健康扫描 · 损坏隔离 · 启用 / 暂停 / 卸载 · npm 一键自
 
 | 正常运行 | 损坏插件被隔离 |
 | --- | --- |
-| ![健康 profile 下的 Plugin Guard](docs/screenshots/plugin-guard-running.zh-CN.png) | ![损坏插件被隔离，web 端正常运行](docs/screenshots/plugin-guard-damaged.zh-CN.png) |
+| ![健康 profile 下的 Plugin Guard](screenshots/plugin-guard-running.zh-CN.png) | ![损坏插件被隔离，web 端正常运行](screenshots/plugin-guard-damaged.zh-CN.png) |
 
 右图：`demo-crash-plugin` 导入即抛错——没有守卫时它会让整个 web 端启动崩溃；有守卫时它被隔离并标记为 **damaged**，其它插件照常运行。
 

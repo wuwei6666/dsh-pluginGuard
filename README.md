@@ -1,4 +1,4 @@
-**English** | [中文](README.zh-CN.md)
+**English** | [中文](docs/README.zh-CN.md)
 
 # dsh-plugin-guard
 
