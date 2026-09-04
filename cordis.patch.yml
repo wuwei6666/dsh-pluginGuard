@@ -1,0 +1,4 @@
+# Plugin Guard for the Web Settings Plugins section.
+- insert:
+    - id: dsh-plugin-guard
+      name: 'dsh-plugin-guard'

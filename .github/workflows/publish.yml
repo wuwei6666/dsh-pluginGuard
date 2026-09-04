@@ -1,0 +1,25 @@
+# One-click npm publish with provenance. Create an npm granular access token
+# (publish rights for dsh-plugin-guard) and store it as the NPM_TOKEN repo
+# secret, then run this workflow manually after bumping "version".
+name: publish
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write # npm provenance
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      - run: npm test
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

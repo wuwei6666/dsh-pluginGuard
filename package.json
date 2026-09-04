@@ -1,0 +1,81 @@
+{
+  "name": "dsh-plugin-guard",
+  "description": "Plugin Guard for the official DSH web client: isolate broken user plugins so the web UI stays up, plus one-click self-update from npm.",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./protocol": {
+      "import": "./lib/protocol.js",
+      "default": "./lib/protocol.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuwei6666/dsh-pluginGuard.git"
+  },
+  "homepage": "https://github.com/wuwei6666/dsh-pluginGuard#readme",
+  "bugs": "https://github.com/wuwei6666/dsh-pluginGuard/issues",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "deepseek-harness-plugin",
+    "deepseek-harness-web",
+    "cordis",
+    "plugin-guard",
+    "plugin-manager",
+    "plugin-safety"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/cordis-plugin-loader": "*",
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    },
+    "@deepseek-ai/cordis-plugin-loader": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/protocol.js",
+    "lib/profile-guard.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node tests/smoke.mjs"
+  }
+}
